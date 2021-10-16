@@ -8,7 +8,9 @@ File or Folder | Purpose
 ---------|----------
 `app/` | content for UI frontends goes here
 `db/` | your domain models and data go here
+    - schemas && mock data  
 `srv/` | your service models and code go here
+    - service entities .cds , ui anotation -ui.cds  , Blogic .js
 `package.json` | project metadata and configuration
 `readme.md` | this getting started guide
 
