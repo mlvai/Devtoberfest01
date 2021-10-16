@@ -1,24 +1,35 @@
 {
-  "name": "cpapp",
-  "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
-  "license": "UNLICENSED",
-  "private": true,
-  "dependencies": {
-    "@sap/cds": "^4",
-    "express": "^4",
-    "passport": "^0.5.0"
-  },
-  "devDependencies": {
-    "@sap/ux-specification": "^1.90.11",
-    "sqlite3": "^5"
-  },
-  "scripts": {
-    "start": "npx cds run"
-  },
-  "sapux": [
-    "app/risks",
-    "app/mitigations"
-  ]
+    "name": "cpapp",
+    "version": "1.0.0",
+    "description": "A simple CAP project.",
+    "repository": "git@github.com:mlvai/Devtoberfest01.git",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "@sap/cds": "^4",
+        "express": "^4",
+        "passport": "^0.5.0",
+        "@sap/hana-client": "^2.4.177"
+    },
+    "devDependencies": {
+        "@sap/ux-specification": "^1.90.11",
+        "sqlite3": "^5"
+    },
+    "scripts": {
+        "start": "npx cds run"
+    },
+    "sapux": [
+        "app/risks",
+        "app/mitigations"
+    ],
+    "cds": {
+        "requires": {
+            "db": {
+                "kind": "sql"
+            }
+        },
+         "hana": {
+            "deploy-format":"hdbtable"
+         } 
+    }
 }
